@@ -16,7 +16,7 @@ namespace TelCo.ColorCoder
             colorMapMinor = new Color[] { Color.Blue, Color.Orange, Color.Green, Color.Brown, Color.SlateGray };
         }
 
-        public static ColorDetails GetColorFromPairNumber(int pairNumber)
+        public static PairFromColor GetColorFromPairNumber(int pairNumber)
         {
             
             int minorSize = colorMapMinor.Length;
@@ -33,7 +33,7 @@ namespace TelCo.ColorCoder
             int minorIndex = zeroBasedPairNumber % minorSize;
 
             // Construct the return val from the arrays
-            ColorDetails pair = new ColorDetails()
+            PairFromColor pair = new PairFromColor()
             {
                 majorColor = colorMapMajor[majorIndex],
                 minorColor = colorMapMinor[minorIndex]
