@@ -2,10 +2,10 @@ using System;
 
 namespace TelCo.ColorCoder
 {
-    class ColorToNumberReferenceManual
+    class ColorToNumberReferenceManual:IManual
     {
 
-        public static void PrintManual()
+        public static void Printmanual()
         {
 
             int start = 1;
