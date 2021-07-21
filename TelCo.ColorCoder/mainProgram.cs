@@ -8,11 +8,19 @@ namespace TelCo.ColorCoder
     {
         private static void Main(string[] args)
         {
-              
-            Console.WriteLine("This is the Reference Manual for user:\n");
-            ColorToNumberReferenceManual.PrintManual();
+            ColorToNumberReferenceManual ReferenceManual=new ColorToNumberReferenceManual();
+            Testing TestManual=new Testing();
+            Manual Refmanual = new Manual(ReferenceManual); 
+
+            Manual testmanual = new Manual(TestManual); 
+
             int pairNumber = 4;
             PairFromColor testPair1 = ColorFromPair.GetColorFromPairNumber(pairNumber);
+              
+            // Console.WriteLine("This is the Reference Manual for user:\n");
+            // ReferenceManual.Printmanual();
+            
+            testPair1 = ColorFromPair.GetColorFromPairNumber(pairNumber);
             Console.WriteLine("[In]Pair Number: {0},[Out] Colors: {1}\n", pairNumber, testPair1);
             Debug.Assert(testPair1.majorColor == Color.White);
             Debug.Assert(testPair1.minorColor == Color.Brown);
